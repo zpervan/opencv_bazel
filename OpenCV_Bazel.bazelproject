@@ -1,0 +1,12 @@
+directories:
+  .
+  -.clwb
+  -.clion_targets
+  -bazel-bin
+  -bazel-opencv_bazel
+  -bazel-out
+  -bazel-testlogs
+
+targets:
+  -@googletestlib//...
+  -@opencvlib//...

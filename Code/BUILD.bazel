@@ -1,0 +1,16 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
+cc_binary(
+    name = "main",
+    srcs = ["src/main.cpp"],
+    deps = ["@opencvlib//:opencv"],
+)
+
+cc_test(
+    name = "test",
+    srcs = ["test/test.cpp"],
+    deps = [
+        "@googletestlib//:gtest",
+        "@opencvlib//:opencv",
+    ],
+)
